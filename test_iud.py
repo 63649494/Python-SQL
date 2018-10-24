@@ -25,7 +25,7 @@ try:    #防止错误发生
     print.cursor.rowcount 
 
     conn.commit() #提交，不加 以上操作无效
-except Exception as e:
+except Exception as e:  #注意这里是except不是catch
     print e
     conn.rollback() #操作失败回滚操作
 
